@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix UI</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    background:black;
+    color:white;
+}
+
+/* LOGIN PAGE */
+
+#loginPage{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.login-box{
+    background:#111;
+    padding:40px;
+    border-radius:10px;
+    width:320px;
+    text-align:center;
+}
+
+.logo{
+    color:red;
+    font-size:45px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:5px;
+    background:#222;
+    color:white;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border:none;
+    border-radius:5px;
+    background:red;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkred;
+}
+
+/* HOME PAGE */
+
+#homePage{
+    display:none;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#111;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.banner{
+    text-align:center;
+    padding:80px 20px;
+    background:#222;
+}
+
+.movies{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.card{
+    width:220px;
+    height:300px;
+    background:#333;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:red;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+
+<div id="loginPage">
+
+<div class="login-box">
+
+<div class="logo">NETFLIX</div>
+
+<h2>Welcome Back 👋</h2>
+
+<p>Watch unlimited movies and shows anytime.</p>
+
+<input type="email" placeholder="Enter Email">
+
+<input type="password" placeholder="Enter Password">
+
+<button onclick="showHome()">
+Sign In
+</button>
+
+</div>
+
+</div>
+
+<!-- HOME PAGE -->
+
+<div id="homePage">
+
+<header>
+
+<div class="logo">NETFLIX</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Movies</a>
+<a href="#">Series</a>
+</nav>
+
+</header>
+
+<section class="banner">
+
+<h1>Unlimited Entertainment 🍿</h1>
+
+<p>Enjoy your favourite movies anytime.</p>
+
+</section>
+
+<section class="movies">
+
+<div class="card">LEO</div>
+
+<div class="card">MASTER</div>
+
+<div class="card">VIKRAM</div>
+
+<div class="card">JAILER</div>
+
+</section>
+
+</div>
+
+<script>
+
+function showHome(){
+
+document.getElementById("loginPage").style.display = "none";
+
+document.getElementById("homePage").style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
